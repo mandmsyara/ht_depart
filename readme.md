@@ -18,52 +18,52 @@ Backend приложение на FastAPI для работы с отделам�
 
 Стек: 
 
-Python
+    Python
 
-FastAPI
+    FastAPI
 
-PostgreSQL
+    PostgreSQL
 
-SQLAlchemy
+    SQLAlchemy
 
-pytest
+    pytest
 
-Docker / docker-compose
+    Docker / docker-compose
 
-Ruff
+    Ruff
 
-pre-commit
+    pre-commit
 
 Базы данных: 
 
-org_structure_db - основная база приложения, для нее созданы миграции через Alembic
+    org_structure_db - основная база приложения, для нее созданы миграции через Alembic
 
-org_structure_test_db - база данных postgres без миграций, заполняется при проведении 
-тестов, потом вся информация с нее удаляется
+    org_structure_test_db - база данных postgres без миграций, заполняется при проведении 
+    тестов, потом вся информация с нее удаляется
 
-Основные эндпоинты
+Основные эндпоинты:
 
-POST   /departments/
+    POST   /departments/
 
-GET    /departments/{department_id}
+    GET    /departments/{department_id}
 
-PATCH  /departments/{department_id}
+    PATCH  /departments/{department_id}
 
-DELETE /departments/{department_id}
+    DELETE /departments/{department_id}
 
-POST   /departments/{department_id}/employees/
+    POST   /departments/{department_id}/employees/
 
 Пример удаления подразделения
 
 Каскадное удаление:
 
-DELETE /departments/1?mode=cascade
+    DELETE /departments/1?mode=cascade
 
 Удаление с переносом сотрудников:
 
-DELETE /departments/1?mode=reassign&reassign_to_department_id=2
+    DELETE /departments/1?mode=reassign&reassign_to_department_id=2
 
 Проверка линтером
 
-```bash
-docker compose exec app ruff check .
+    ```bash
+    docker compose exec app ruff check .
