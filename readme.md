@@ -30,6 +30,10 @@ pytest
 
 Docker / docker-compose
 
+Ruff
+
+pre-commit
+
 Базы данных: 
 
 org_structure_db - основная база приложения, для нее созданы миграции через Alembic
