@@ -42,10 +42,15 @@ org_structure_test_db - база данных postgres без миграций, 
 тестов, потом вся информация с нее удаляется
 
 Основные эндпоинты
+
 POST   /departments/
+
 GET    /departments/{department_id}
+
 PATCH  /departments/{department_id}
+
 DELETE /departments/{department_id}
+
 POST   /departments/{department_id}/employees/
 
 Пример удаления подразделения
