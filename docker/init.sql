@@ -1,0 +1,1 @@
+CREATE DATABASE org_structure_test_db;
